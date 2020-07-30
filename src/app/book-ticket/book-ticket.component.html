@@ -1,0 +1,75 @@
+
+<div class="container-fluid pb-4 pt-4 paddding">
+    <div class="container paddding">
+        <div class="row mx-0">
+            <div class="col-md-8" style="background: -webkit-linear-gradient(left,  #fc95ee, #3a3935);">
+                <br>
+                <div class='card'>
+                    <form (ngSubmit)="payNow()">
+                        <div class='card-header'><h2>
+                            Book ticket </h2>
+                        </div>
+                        <div class='card-body'>
+                            <div class='table-responsive'>
+                                <table class='table'>
+                                    <tr>
+                                        <td>
+                                            <label>Movie name</label>
+                                        </td>
+                                        <td style="font-size: larger; font-weight: bold;"> {{movies.name}}</td>
+                                    </tr>
+                                   
+                                   
+
+                                    <tr>
+                                        <td>
+                                            <label>Time</label>
+                                        </td>
+                                        <td>
+                                            <select id="time" class="form-control" name="time" [(ngModel)]="time">
+                                              <option value="0">Choose time</option>
+                                              <option value="{{movies.time1}}">{{movies.time1 | date:'short'}}</option>
+                                              <option value="{{movies.time2}}">{{movies.time2 | date:'short'}}</option>
+                                              <option value="{{movies.time3}}">{{movies.time3 | date:'short'}}</option>
+                                              <option value="{{movies.time4}}">{{movies.time4 | date:'short'}}</option>
+                                             
+                                            </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>no of seats</label>
+                                        </td>
+                                        <td><input type="text" name="seats" placeholder="enter no of seats you want (only numbers) " class="form-control" [(ngModel)]="seats" (keyup)="amountCal()"></td>
+                                    </tr>
+                                   
+                                    <tr>
+                                        <td>
+                                            <label>Total Amount</label>
+                                        </td>
+                                        <td  style="font-size: larger; font-weight: bold; color:red">&#8377;{{amount}}</td>
+                                    </tr>
+                                    
+                                    
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="submit"  class="btnBook" value="pay"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+        </div>
+            <!-- Material form login -->
+            <div class="col-md-4">
+                <img src="assets/images/movieNight.jpg" width="350px" height="500px" alt="img"/>
+                            
+                
+              </div>
+</div>
+
+</div>
+</div>
+    
+

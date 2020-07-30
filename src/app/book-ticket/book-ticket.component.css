@@ -1,0 +1,27 @@
+.col-md-8{
+    border-radius: 20%;
+}
+.card{
+    border-radius: 20%;
+   /* border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;*/
+}
+.card-header{
+    text-align: center;
+}
+label{
+    font-weight: bolder;
+}
+
+.btnBook{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}

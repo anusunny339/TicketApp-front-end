@@ -1,0 +1,46 @@
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container contact">
+	<div class="row">
+		<div class="col-md-3">
+		
+				<img src="https://thumbs.dreamstime.com/b/vector-illustration-isolated-white-background-login-button-icon-login-icon-button-127001338.jpg"  width="190px" height="320px" alt="image"/>
+				
+			
+		</div>
+		<div class="col-md-9">
+      <form class="form-signin" (ngSubmit)="login()" ngNativeValidate>
+			<div class="contact-form">
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="fname">Username</label>
+				  <div class="col-sm-10">          
+            <input type="email" name="email" class="form-control" placeholder="Email address" [(ngModel)]="email" required autofocus>
+                    
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="lname">Password</label>
+				  <div class="col-sm-10">          
+				
+            <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="password" required>
+				  </div>
+				</div>
+			
+				
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btnlogin">Login</button>
+				  </div>
+				</div>
+      </div>
+      </form>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,40 @@
+
+<div class="container-fluid pb-4 pt-4 paddding">
+    <div class="container paddding" style="background: -webkit-linear-gradient(left,  #fc95ee, #3a3935);">
+        <div class="row mx-0">
+            <div class="col-md-8">
+            
+                          
+            
+            
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4" style="color:white;">{{ id }}</div>
+                </div>
+                <div class="row pb-4" *ngFor='let movie of movies'>
+                    <div class="col-md-5">
+                        <div class="fh5co_hover_news_img">
+                            <div class="fh5co_news_img"><img [src]='movie.imgUrl' width="350px" height="350px" onerror="this.src='assets/images/download (1).jpg';" alt=""/></div>
+                            
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 animate-box">
+                        <a  class="fh5co_magna py-2" style="font-size: x-large; font-weight: bold;text-transform: uppercase;"> {{ movie.name }}
+                       </a> <br> <a  class="fh5co_mini_time py-3" style="color:white;"> {{ movie.language }} -
+                        {{ movie.type }}</a>
+                        <div class="fh5co_consectetur" style="color:white;"> {{ movie.description }}
+                        </div>
+                        <div class="fh5co_consectetur" style='text-align: right;'><button type="button" class="btn btn-primary" (click)='view(movie._id)'>>></button>
+                        </div>
+                    </div>
+                </div>
+            
+
+
+        </div>
+        <div class="col-md-4">
+            
+           
+        </div>
+    </div>
+</div>

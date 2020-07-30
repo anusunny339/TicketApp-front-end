@@ -1,0 +1,239 @@
+
+
+
+<div class="container-fluid pb-4 pt-4 paddding">
+    <div class="container paddding" style="background: -webkit-linear-gradient(left,  #fc95ee, #3a3935);">
+        <div class="row mx-0">
+            <div class="col-md-8">
+            
+                          
+            
+            
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4" style="color:white; font-size: x-large; font-weight: bold;text-transform: uppercase;">{{movies.name}}</div>
+                </div>
+                <div class="row pb-4">
+                    <div class="col-md-5">
+                       
+                            <img [src]='movies.imgUrl' width="260px" height="350px" onerror="this.src='assets/images/download (1).jpg';" alt=""/>
+                            
+                           
+                        
+                    </div>
+                    <div class="col-md-7 animate-box">
+                       
+                        
+                        <p class="" style=" color:white; font-size: large; font-weight: bold; font-style: italic;">{{ movies. language}} - {{ movies. type}}</p>
+                        <p class="" style="color:white; font-size: large; font-weight: bold; font-style: italic; "> {{ movies. duration}} hrs</p>
+                        <p class="" style="color:white; font-size: large; font-weight: bold;">Certificate -  {{ movies. certificate}}</p>
+                    
+                        <p class="" style="color:white; font-size: large; font-weight: bold;">Director -  {{ movies. director}}</p>
+                        
+                        <p class="" style="color:white; font-size: large; font-weight: bold;">cast -  {{ movies. casting}}</p>
+                    
+                        <p class="" style="color:white; font-size: medium; font-weight:normal">{{ movies. description}}</p>
+                     
+                      <div>  <table class="table" style="color:white;">
+                            <thead>
+                              <tr style="color:black;">
+                                
+                                <th>Show Timings</th>
+                                <th>seats</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>{{movies.time1 | date:'short'}}</td>
+                                        <td>{{ movies.seats1}}</td>
+                                    </tr>
+                                    <tr *ngIf="movies.time2"><td> {{movies.time2 | date:'short'}}</td>
+                                    <td>{{ movies.seats2}}</td></tr>
+                                    <tr *ngIf="movies.time3"><td>{{movies.time3 | date:'short'}}</td>
+                                    <td>{{ movies.seats3}}</td></tr>
+                                    <tr *ngIf="movies.time4"><td>{{movies.time4 | date:'short'}}</td>
+                                    <td>{{ movies.seats4}}</td></tr>
+                                </tbody>
+                        </table></div>
+                        
+                   <br>
+                        
+                        <p class="l1" style="font-size: large; font-weight: bold; ">
+                            &#8377;{{movies.price}}
+                        </p>
+
+                        <div class="fh5co_consectetur" style='text-align: right;'><button type="button" class="btn btn-primary" (click)="bookTicket(movies._id)">Book Ticket</button>
+                        </div>
+                        
+                    </div>
+                </div>
+           
+
+           
+
+        </div>
+        <div class="col-md-4">
+            <div>
+                <div class="fh5co_heading fh5co_heading_border_bottom pt-3 py-2 mb-4"  style="color:white;">Categories</div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-5 align-self-center">
+                    <img src="assets/images/comedy.jpg" width="200px" height="100px" alt="img">
+                    <h6> <a [routerLink]="['/category', 'Comedy']">COMEDY</a></h6>
+                </div>
+               
+            </div>
+            <div class="row pb-3">
+                <div class="col-5 align-self-center">
+                    <img src="assets/images/romance.jpg" width="200px" height="100px" alt="img">
+                <h6><a [routerLink]="['/category', 'Romance']">ROMANCE</a></h6>
+            
+                </div>
+                
+            </div>
+            <div class="row pb-3">
+                <div class="col-5 align-self-center">
+                    <img src="assets/images/fantasy.jpg" width="200px" height="100px" alt="img">
+                    <h6><a [routerLink]="['/category', 'Fantasy']">FANTASY</a></h6>
+                </div>
+                
+            </div>
+            <div class="row pb-3">
+                <div class="col-5 align-self-center">
+                    <img src="https://www.denofgeek.com/wp-content/uploads/2019/11/elsa_and_anna_in_frozen_2_ending_0.jpg?fit=1200%2C761" width="200px" height="100px" alt="img">
+                    <h6><a [routerLink]="['/category', 'Animation']">ANIMATION</a></h6>
+                </div>
+                
+            </div>
+            <div class="row pb-3">
+                <div class="col-5 align-self-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQUymbtdNytrOqgcJb9EGU4hjo3l996GNgdlQ&usqp=CAU" width="200px" height="100px" alt="img">
+                    <h6><a [routerLink]="['/category', 'Action']">ACTION</a></h6>
+                </div>
+                
+            </div>
+             
+            <div class="row pb-3">
+                <div class="col-5 align-self-center">
+                    <img src="https://static.toiimg.com/thumb/64379389.cms?width=137&height=195&imgsize=" width="200px" height="100px" alt="img">
+                    <h6><a [routerLink]="['/category', 'Action']">MYSTERY</a></h6>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+
+
+
+<!--<div class="container-fluid pb-4 pt-4 paddding">
+    <div class="container paddding">
+        <div class="row">
+           
+            
+                
+                    
+            
+            <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft" style="width:100%">
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Availble Movies</div>
+                </div>
+                <div class="row pb-4">
+                    <div class="col-md-5" style='margin-left:0;'>
+                        <div class="fh5co_hover_news_img" style='height:300px; margin-left:0;'>
+                            <img [src]='movies.imgUrl' width="300px" height="350px" onerror="this.src='assets/images/download (1).jpg';" alt=""/></div>
+                            
+                            <div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 animate-box">
+                        <a href="" class="fh5co_magna py-2" style="font-size: x-large; font-weight: bold;text-transform: uppercase;"> name
+                       </a> <br> <a href="#" class="fh5co_mini_time py-3"> ggg-
+                        j</a>
+                        <div class="fh5co_consectetur"> des
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-7 animate-box" style="margin-left: 3px 3px;">
+                        <p class="fh5co_magna py-2" style="font-size: x-large; font-weight: bold;text-transform: uppercase;">{{ movies. name}}</p>
+                        <p class="" style="font-size: large; font-weight: bold; font-style: italic;">{{ movies. language}} - {{ movies. type}}</p>
+                        <p class="" style="font-size: large; font-weight: bold; font-style: italic; "> {{ movies. duration}} hrs</p>
+                        <p class="" style="font-size: large; font-weight: bold;">Certificate -  {{ movies. certificate}}</p>
+                    
+                        <p class="" style="font-size: large; font-weight: bold;">Director -  {{ movies. director}}</p>
+                        
+                        <p class="" style="font-size: large; font-weight: bold;">cast -  {{ movies. casting}}</p>
+                    
+                        <p class="" style="font-size: medium; font-weight:normal">{{ movies. description}}</p>
+                        <br>
+                        <p class="fh5co_magna py-2" style="font-size: large; font-weight: bold; color: red;">show Time - <b>{{movies.time}}</b></p>
+                    
+                    </div>-->
+                    <!--<div class="col-md-7 animate-box">
+    
+                       <div>
+                        <table class="table table-bordered">
+                            
+                            <tr>
+                                <td>Name</td>
+                                <td> {{ movies. name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Certificate</td>
+                                <td> {{ movies. certificate}}</td>
+                            </tr>
+                            <tr>
+                                <td>Language</td>
+                                <td> {{ movies. language}}</td>
+                            </tr>
+                            <tr>
+                                <td>Type</td>
+                                <td> {{ movies. type}}</td>
+                            </tr>
+                            <tr>
+                                <td>Duration</td>
+                                <td> {{ movies. duration}}</td>
+                            </tr>
+                            <tr>
+                                <td>Director</td>
+                                <td> {{ movies.director}}</td>
+                            </tr>
+                            <tr>
+                                <td>Casting</td>
+                                <td> {{ movies.casting}}</td>
+                            </tr>
+                            <tr>
+                                <td>Release Date</td>
+                                <td> {{ movies.releaseDate}}</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td> {{ movies.description}}</td>
+                            </tr>
+                            <tr>
+                                <td>Time</td>
+                                <td> {{ movies.time}}</td>
+                            </tr>
+                            <tr>
+                                <td>Price</td>
+                                <td> {{ movies.price}}</td>
+                            </tr>
+                              </table>
+                       </div>
+                       
+                        <div class="fh5co_consectetur" style='text-align: right;'><button type="button" class="btn btn-primary">Book Ticket</button>
+                        </div>
+                    </div>-->
+                <!--</div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>-->
+
